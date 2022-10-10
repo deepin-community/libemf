@@ -1,0 +1,83 @@
+libemf (1.0.13-2) unstable; urgency=medium
+
+  * .la files are not installed on purpose (closes: #963990)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 30 Jun 2020 10:06:19 +0100
+
+libemf (1.0.13-1) unstable; urgency=medium
+
+  * New upstream version
+    - addresses security issue CVE-2020-13999 (closes: #963778)
+    - CVE-2020-11863, CVE-2020-11864, CVE-2020-11865, CVE-2020-11866 were
+      addressed in 1.0.12.
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 26 Jun 2020 23:21:35 +0100
+
+libemf (1.0.12-1) unstable; urgency=medium
+
+  * New upstream version
+  * Refresh patches; upstream addressed EOF-endian and aarch64 support
+  * debian/copyright: use spaces rather than tabs to start continuation
+    lines.
+  * Update standards version to 4.5.0, no changes needed.
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 01 May 2020 10:13:25 +0100
+
+libemf (1.0.11-3) unstable; urgency=medium
+
+  * Update standards version, no changes needed.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Archive, Bug-Submit.
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 12 Oct 2019 15:14:22 +0100
+
+libemf (1.0.11-2) unstable; urgency=medium
+
+  [ Balint Reczey ]
+  * Pick patch from Fedora to fix build on arm64 (Closes: #919555)
+  * Handle EOF and other errors in an endianness-aware way (Closes: #919766)
+
+  [ Barak A. Pearlmutter ]
+  * Accept Balint Reczey patches, with thanks.
+  * Add build dependency for /usr/bin/dot used by doxygen
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 06 Feb 2019 14:15:12 +0000
+
+libemf (1.0.11-1) unstable; urgency=medium
+
+  * New upstream version
+  * bump policy
+  * debhelper 12
+  * move mods to upstream into debian/patches
+    - cannot rm -r doc/ so exclude doxygen-generated files (doc/*) from
+      upstream tarball to avoid about a zillion lintian issues.
+    - Similarly exclude autotools-generated files because they annoy me
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 07 Jan 2019 19:59:13 +0000
+
+libemf (1.0.9+git.10.3231442-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/watch: Use https protocol
+
+  [ Barak A. Pearlmutter ]
+  * dh11
+  * bump policy
+  * swizzle packaging repo to salsa
+  * adjust documentation in -dev directory per policy
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 02 Nov 2018 16:05:59 +0000
+
+libemf (1.0.9+git.10.3231442-1) unstable; urgency=medium
+
+  * Incorporate Fedora aarch64 patch
+  * Restrict architecture list (closes: #872880)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 29 Aug 2017 14:58:58 +0100
+
+libemf (1.0.9+git.9.e2f97d9-1) unstable; urgency=medium
+
+  * Initial release (closes: #417538)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 19 Jun 2017 18:08:30 +0100
