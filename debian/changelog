@@ -1,3 +1,9 @@
+libemf (1.0.13-2deepin0) unstable; urgency=medium
+
+  * No source change upload against GCC 12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 19 Sep 2024 22:53:41 +0800
+
 libemf (1.0.13-2) unstable; urgency=medium
 
   * .la files are not installed on purpose (closes: #963990)
